@@ -1,16 +1,47 @@
-# ---------------------------------------------------------
-# Configuration File
+# ==========================================================
+# config.py
+#
+# PURPOSE:
+# Centralized application configuration.
 #
 # Java Equivalent:
-# application.properties
-# application.yml
+# application.properties / application.yml
 #
-# Why?
-# Central place for application configuration.
-# ---------------------------------------------------------
+# Instead of hardcoding values in code, we keep them
+# in .env and load them here.
+# ==========================================================
 
-MODEL_NAME = "llama3"
+# ----------------------------------------------------------
+# Loads values from .env into environment variables
+#
+# Java equivalent:
+# Spring Boot automatically loads application.properties
+# ----------------------------------------------------------
+from dotenv import load_dotenv
 
-APP_NAME = "AI Learning API"
+# ----------------------------------------------------------
+# os module is used to read environment variables
+#
+# Java equivalent:
+# System.getenv("KEY")
+# ----------------------------------------------------------
+import os
 
-APP_VERSION = "1.0"
+# ----------------------------------------------------------
+# Load the .env file
+# ----------------------------------------------------------
+load_dotenv()
+
+# ----------------------------------------------------------
+# Read values from .env
+#
+# Java equivalent:
+#
+# @Value("${model.name}")
+# private String modelName;
+# ----------------------------------------------------------
+APP_NAME = os.getenv("APP_NAME")
+
+APP_VERSION = os.getenv("APP_VERSION")
+
+MODEL_NAME = os.getenv("MODEL_NAME")
