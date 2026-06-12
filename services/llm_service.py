@@ -1,48 +1,48 @@
-# ---------------------------------------------------------
-# Service Layer
+from providers.base_provider import AIProvider
+from providers.ollama_provider import OllamaProvider
+
+# =====================================================
 #
-# Java equivalent:
-# @Service class
+# - Factory Pattern
+# - Dependency Injection
 #
-# Why needed?
-# Business logic should not stay inside controller/routes.
-#
-# Controllers should:
-# - receive request
-# - validate request
-# - call service layer
-#
-# This improves:
-# - maintainability
-# - testing
-# - scalability
-# ---------------------------------------------------------
+# so that llm_service does not create providers itself.
+# =====================================================
 
-from app_config.config import MODEL_NAME
-from ollama import chat
-from app_logging.logger_config import logger
-from providers.ollama_provider import ask_model
+from providers.provider_factory import get_provider
+
+provider = get_provider()
 
 
-def ask_llama(question: str):
+def ask_llama(question: str) -> str:
+    """
+    Business operation:
+    Ask AI a question.
 
-    return ask_model(question)
-# ---------------------------------------------------------
-# Summarization Service
-#
-# Java Equivalent:
-# service.summarize(...)
-#
-# Why?
-# Encapsulates AI prompt logic.
-# ---------------------------------------------------------
+    Java Equivalent:
+    aiProvider.ask(question)
+    """
+    return provider.ask(question)
 
-def summarize_text(text: str):
 
-    prompt = f"""
-    Summarize the following text in 3 bullet points:
+def summarize_text(text: str) -> str:
+    """
+    Business operation:
+    Summarize text.
 
-    {text}
+    Currently implemented by prompt engineering.
+
+    Architect Note:
+    We are reusing the same provider instead of
+    duplicating Ollama-specific code.
+
+    This follows DRY (Don't Repeat Yourself).
     """
 
-    return ask_model(prompt)
+    prompt = f"""
+Summarize the following text in a concise way:
+
+{text}
+"""
+
+    return provider.ask(prompt)
