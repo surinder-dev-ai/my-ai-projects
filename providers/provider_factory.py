@@ -1,3 +1,5 @@
+from app_config.config import PROVIDER
+
 from providers.base_provider import AIProvider
 from providers.ollama_provider import OllamaProvider
 
@@ -15,4 +17,7 @@ def get_provider() -> AIProvider:
         -> ClaudeProvider
     """
 
-    return OllamaProvider()
+    if PROVIDER.lower() == "ollama":
+        return OllamaProvider()
+
+    raise ValueError(f"Unsupported provider: {PROVIDER}")

@@ -18,6 +18,10 @@ from fastapi import FastAPI
 from models.request_models import QuestionRequest
 from models.summarize_request import SummarizeRequest
 from models.response_models import SummaryResponse
+from exceptions.custom_exceptions import AIProviderException
+from exceptions.exception_handler import ai_provider_exception_handler
+from app_config.config import APP_NAME, APP_VERSION, MODEL_NAME
+
 
 # ---------------------------------------------------------
 # Import service layer
@@ -54,7 +58,7 @@ from services.llm_service import ask_llama, summarize_text
 # ---------------------------------------------------------
 app = FastAPI()
 from app_config.config import MODEL_NAME
-from app_logging.logger_config import logger
+from app_logging.logger_config import logger    
 logger.info("Application Started - FastAPI is running")
 
 
@@ -204,3 +208,16 @@ def summarize(request: SummarizeRequest):
         return {
             "error": str(e)
         }
+
+app.add_exception_handler(
+    AIProviderException,
+    ai_provider_exception_handler,
+)    
+
+@app.get("/health")
+def health_check():
+    return {
+        "application": APP_NAME,
+        "version": APP_VERSION,
+        "status": "UP",
+    }

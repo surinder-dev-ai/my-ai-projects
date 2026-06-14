@@ -45,3 +45,5 @@ APP_NAME = os.getenv("APP_NAME")
 APP_VERSION = os.getenv("APP_VERSION")
 
 MODEL_NAME = os.getenv("MODEL_NAME")
+
+PROVIDER = os.getenv("PROVIDER", "ollama")
