@@ -12,7 +12,11 @@
 # - request handling
 # - automatic Swagger docs
 # ---------------------------------------------------------
+from urllib.request import Request
+
 from fastapi import FastAPI
+from fastapi.responses import JSONResponse
+from models.error_response import ErrorDetails, ErrorResponse
 
 
 from models.request_models import QuestionRequest
@@ -21,6 +25,7 @@ from models.response_models import SummaryResponse
 from exceptions.custom_exceptions import AIProviderException
 from exceptions.exception_handler import ai_provider_exception_handler
 from app_config.config import APP_NAME, APP_VERSION, MODEL_NAME
+
 
 
 # ---------------------------------------------------------
@@ -221,3 +226,70 @@ def health_check():
         "version": APP_VERSION,
         "status": "UP",
     }
+
+# -----------------------------------------------------------------------------
+# Request ID Middleware
+#
+# Cross-cutting infrastructure.
+#
+# Java Equivalent:
+#     OncePerRequestFilter
+# -----------------------------------------------------------------------------
+
+from cross_cutting.middleware.request_id import add_request_id
+from cross_cutting.middleware.request_logging import log_requests
+# -----------------------------------------------------------------------------
+# Register HTTP Middleware
+#
+# Every incoming request passes through this middleware before reaching
+# any controller/endpoints.
+#
+# Current Responsibilities:
+#     - Generate Request ID
+#
+# Future Responsibilities:
+#     - Authentication
+#     - Metrics
+#     - Tracing
+#     - Request Logging
+# -----------------------------------------------------------------------------
+
+app.middleware("http")(add_request_id)
+app.middleware("http")(log_requests) 
+
+@app.exception_handler(Exception)
+async def global_exception_handler(request: Request, exc: Exception):
+    """
+    Purpose:
+        Catches unhandled exceptions and returns a standard API response.
+
+    Why:
+        Prevents leaking internal implementation details and ensures
+        consistent error contracts.
+
+    Architecture:
+        Cross-Cutting Concern
+
+    Java Equivalent:
+        @ControllerAdvice + @ExceptionHandler
+    """
+
+    request_id = getattr(request.state, "request_id", "UNKNOWN")
+
+    logger.exception("Unhandled Exception")
+
+    error = ErrorResponse(
+        error=ErrorDetails(
+            code="INTERNAL_SERVER_ERROR",
+            message="Unexpected error occurred",
+            request_id=request_id,
+        )
+    )
+
+    return JSONResponse(
+        status_code=500,
+        content=error.model_dump(),
+    )
+
+from cross_cutting.middleware.request_timing import log_request_timing
+app.middleware("http")(log_request_timing)

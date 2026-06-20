@@ -1,0 +1,12 @@
+| Topic                | Python                     | Java/Spring                   |
+| -------------------- | -------------------------- | ----------------------------- |
+| Config               | `python-dotenv` / Pydantic | `application.yml`             |
+| Logging              | `logging`                  | SLF4J + Logback               |
+| Middleware           | FastAPI Middleware         | `OncePerRequestFilter`        |
+| DTO                  | Pydantic                   | DTO / Record                  |
+| Dependency Injection | FastAPI Depends            | Spring DI                     |
+| Provider             | Strategy                   | Strategy                      |
+| Factory              | Factory                    | Factory                       |
+| Exception Handler    | `@app.exception_handler`   | `@ControllerAdvice`           |
+| Async                | `async/await`              | `CompletableFuture` / WebFlux |
+| Streaming            | SSE                        | `SseEmitter` / WebFlux        |
