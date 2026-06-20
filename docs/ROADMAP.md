@@ -72,10 +72,17 @@
 - ⬜ Circuit Breaker
 - ⬜ Fallback Strategy
 - ⬜ Graceful Degradation
+- ⬜ Exponential Backoff
+- ⬜ Bulkhead Pattern
+- ⬜ Idempotency
+- ⬜ Dead Letter Queue (Concept)
 ### 📈 Scalability
 - ⬜ Async Programming
 - ⬜ Concurrent Requests
 - ⬜ Connection Pooling
+- ⬜ Request Batching
+- ⬜ Parallel LLM Calls
+- ⬜ Fan-out / Fan-in
 ### 🔐 Protection
 - ⬜ Rate Limiting
 - ⬜ Authentication
@@ -96,6 +103,10 @@
 - ⬜ Liveness Checks
 - ⬜ OpenTelemetry
 - ⬜ Distributed Tracing
+- ⬜ Token Usage Metric
+- ⬜ Cost Metrics
+- ⬜ Alerting
+- ⬜ SLI / SLO / SLA Basics
 ### 🛠️ Tools
 | Tool | Purpose |
 | ----- | ----- |
@@ -122,6 +133,11 @@
 - ⬜ Provider Selection
 - ⬜ Failover
 - ⬜ Provider Fallback
+- ⬜ Cost-based Routing
+- ⬜ Model Routing
+- ⬜ A/B Testing
+- ⬜ Canary Releases
+- ⬜ Provider Health Monitoring
 ---
 
 ## ✍️ Phase 5 — Prompt Engineering Layer
@@ -133,6 +149,11 @@
 - ⬜ Prompt Builder
 - ⬜ Prompt Versioning
 - ⬜ Prompt Registry
+- ⬜ Few-shot Prompting
+- ⬜ Structured Output
+- ⬜ JSON Mode
+- ⬜ Prompt Evaluation
+- ⬜ Prompt Testing
 ### 🏛️ Architecture
 - Prompt Service
 - Prompt Repository
@@ -145,6 +166,9 @@
 - ⬜ Server-Sent Events (SSE)
 - ⬜ WebSockets
 - ⬜ Streaming APIs
+- ⬜ Backpressure
+- ⬜ Cancellation
+- ⬜ Partial Responses
 ---
 
 ## 🔍 Phase 7 — Embeddings & Vector Search
@@ -154,6 +178,8 @@
 - ⬜ Embeddings
 - ⬜ Chunking
 - ⬜ Semantic Search
+- ⬜ Metadata Filtering
+- ⬜ Embedding Evaluation
 ### 🗄️ Vector Databases
 | Database | Status |
 | ----- | ----- |
@@ -176,6 +202,11 @@
 ### 🚀 Advanced Techniques
 - ⬜ Hybrid Search
 - ⬜ Reranking
+- ⬜ Query Transformation
+- ⬜ Context Compression
+- ⬜ Citation Generation
+- ⬜ Hallucination Detection
+- ⬜ RAG Evaluation
 ---
 
 ## 🤖 Phase 9 — AI Agents
@@ -185,6 +216,13 @@
 - ⬜ Planning
 - ⬜ Memory
 - ⬜ Multi-step Reasoning
+
+  ### 🚀 Agent Patterns
+ - ⬜ ReAct Pattern
+ - ⬜ Reflection Pattern
+ - ⬜ Multi-Agent Collaboration
+ - ⬜ Human-in-the-Loop
+ - ⬜ Agent Evaluation 
 ---
 
 ## 🔧 Phase 10 — Tool Calling
@@ -213,6 +251,11 @@
 - ⬜ MCP Client
 - ⬜ MCP Tools
 - ⬜ MCP Resources
+
+🛡️ **Security & Discovery**
+- ⬜ MCP Authentication
+- ⬜ MCP Security
+- ⬜ MCP Server Discovery  
 ---
 
 ## 🧠 Phase 12 — Memory Systems
@@ -221,6 +264,11 @@
 - ⬜ Conversation Memory
 - ⬜ Session Memory
 - ⬜ Long-term Memory
+
+🏛️ **Memory Architecture**  
+  ⬜ Vector Memory
+  ⬜ Memory Summarization
+  ⬜ Memory Eviction Strategy
 ---
 
 ## 🛡️ Phase 13 — AI Safety
@@ -231,6 +279,12 @@
 - ⬜ Jailbreak Protection
 - ⬜ Input Validation
 - ⬜ Output Validation
+
+🔒 Security Features
+  ⬜ PII Detection
+  ⬜ Data Redaction
+  ⬜ Content Moderation
+  ⬜ Output Filtering
 ---
 
 ## ⚡ Phase 14 — Performance
