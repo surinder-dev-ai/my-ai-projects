@@ -1,249 +1,314 @@
-AI Gateway Master Roadmap v2
-📍Phase 0 - Foundation ✅
-✅ Python fundamentals
-✅ Virtual Environment
-✅ pip
-✅ Git
-✅ GitHub
-✅ Project Structure
-✅ FastAPI basics
-✅ Swagger
-✅ DTOs (Pydantic)
-✅ Configuration
-✅ Logging
-✅ .env
-✅ Ollama
-✅ Local LLM
-✅ Layered Architecture
+# 🚀 AI Gateway Master Roadmap v2
+>  _Building a production-grade AI Gateway from the ground up_ 
 
-📍Phase 1 - Production Foundation 🚧
-Architecture
-✅ Service Layer
-✅ Provider Layer
-✅ Factory Pattern
-✅ Strategy Pattern
-✅ Dependency Inversion
-✅ Separation of Concerns
-Cross Cutting
-✅ Health Endpoint
-✅ Global Exception Handling
-✅ Request ID
-⬜ Better Error Responses
-⬜ Structured Logging
-⬜ Request Logging
-⬜ Validation Strategy
-Config
-✅ Environment Variables
-⬜ Multiple Profiles
-⬜ Config Validation
+---
 
-📍Phase 2 - Production Reliability
-Reliability
-⬜ Timeout
-⬜ Retry
-⬜ Circuit Breaker
-⬜ Fallback Strategy
-⬜ Graceful Degradation
-Scalability
-⬜ Async Programming
-⬜ Concurrent Requests
-⬜ Connection Pooling
-Protection
-⬜ Rate Limiting
-⬜ Authentication
-⬜ Authorization
-⬜ API Keys
+## 📊 Progress Overview
+| Track | Status | Progress |
+| ----- | ----- | ----- |
+| Core Development | Phase 1 | ████████░░░░░░░░░░░░ 40% |
+| Architecture Deep Dive | Parallel | 🔄 Ongoing |
+| System Design | Parallel | 🔄 Ongoing |
+---
 
-📍Phase 3 - Observability
-⬜ Correlation IDs
-⬜ Request Tracing
-⬜ Structured Logs
-⬜ Metrics
-⬜ Health Checks
-⬜ Readiness Checks
-⬜ Liveness Checks
-⬜ OpenTelemetry
-⬜ Distributed Tracing
+## 🏁 Phase 0 — Foundation ✅
+>  _Master the basics before building the gateway_ 
 
-Tools:
+| Topic | Status |
+| ----- | ----- |
+| Python Fundamentals | ✅ |
+| Virtual Environment | ✅ |
+| pip | ✅ |
+| Git | ✅ |
+| GitHub | ✅ |
+| Project Structure | ✅ |
+| FastAPI Basics | ✅ |
+| Swagger | ✅ |
+| DTOs (Pydantic) | ✅ |
+| Configuration | ✅ |
+| Logging | ✅ |
+| .env | ✅ |
+| Ollama | ✅ |
+| Local LLM | ✅ |
+| Layered Architecture | ✅ |
+---
 
-Jaeger
-Grafana
-Prometheus
+## 🏗️ Phase 1 — Production Foundation 🚧
+>  _Building solid architectural patterns_ 
 
-📍Phase 4 - Multi Provider AI Gateway
+### 🧱 Architecture
+| Pattern | Status |
+| ----- | ----- |
+| Service Layer | ✅ |
+| Provider Layer | ✅ |
+| Factory Pattern | ✅ |
+| Strategy Pattern | ✅ |
+| Dependency Inversion | ✅ |
+| Separation of Concerns | ✅ |
+### 🔀 Cross-Cutting Concerns
+| Feature | Status |
+| ----- | ----- |
+| Health Endpoint | ✅ |
+| Global Exception Handling | ✅ |
+| Request ID | ✅ |
+| Better Error Responses | ⬜ |
+| Structured Logging | ⬜ |
+| Request Logging | ⬜ |
+| Validation Strategy | ⬜ |
+### ⚙️ Configuration
+| Feature | Status |
+| ----- | ----- |
+| Environment Variables | ✅ |
+| Multiple Profiles | ⬜ |
+| Config Validation | ⬜ |
+---
 
-Providers:
+## 🛡️ Phase 2 — Production Reliability
+>  _Making the system bulletproof_ 
 
-⬜ Ollama
-⬜ OpenAI
-⬜ Gemini
-⬜ Anthropic
-⬜ Azure OpenAI
+### 💪 Reliability Patterns
+- ⬜ Timeout
+- ⬜ Retry
+- ⬜ Circuit Breaker
+- ⬜ Fallback Strategy
+- ⬜ Graceful Degradation
+### 📈 Scalability
+- ⬜ Async Programming
+- ⬜ Concurrent Requests
+- ⬜ Connection Pooling
+### 🔐 Protection
+- ⬜ Rate Limiting
+- ⬜ Authentication
+- ⬜ Authorization
+- ⬜ API Keys
+---
 
-Architecture:
+## 👁️ Phase 3 — Observability
+>  _See everything, know everything_ 
 
-⬜ Provider Factory
-⬜ Strategy Pattern
-⬜ Dynamic Routing
-⬜ Provider Selection
-⬜ Failover
-⬜ Provider Fallback
+### 📡 Monitoring & Tracing
+- ⬜ Correlation IDs
+- ⬜ Request Tracing
+- ⬜ Structured Logs
+- ⬜ Metrics
+- ⬜ Health Checks
+- ⬜ Readiness Checks
+- ⬜ Liveness Checks
+- ⬜ OpenTelemetry
+- ⬜ Distributed Tracing
+### 🛠️ Tools
+| Tool | Purpose |
+| ----- | ----- |
+| Jaeger | Distributed Tracing |
+| Grafana | Visualization |
+| Prometheus | Metrics Collection |
+---
 
-📍Phase 5 - Prompt Engineering Layer
-⬜ Prompt Templates
-⬜ System Prompts
-⬜ Prompt Builder
-⬜ Prompt Versioning
-⬜ Prompt Registry
+## 🌐 Phase 4 — Multi-Provider AI Gateway
+>  _One gateway to rule them all_ 
 
-Architecture:
+### 🤖 Supported Providers
+| Provider | Status |
+| ----- | ----- |
+| Ollama | ⬜ |
+| OpenAI | ⬜ |
+| Gemini | ⬜ |
+| Anthropic | ⬜ |
+| Azure OpenAI | ⬜ |
+### 🏛️ Architecture
+- ⬜ Provider Factory
+- ⬜ Strategy Pattern
+- ⬜ Dynamic Routing
+- ⬜ Provider Selection
+- ⬜ Failover
+- ⬜ Provider Fallback
+---
 
-Prompt Service
-Prompt Repository
+## ✍️ Phase 5 — Prompt Engineering Layer
+>  _Craft and manage prompts like a pro_ 
 
-📍Phase 6 - Streaming
-⬜ Token Streaming
-⬜ SSE
-⬜ WebSockets
-⬜ Streaming APIs
+### 📝 Core Features
+- ⬜ Prompt Templates
+- ⬜ System Prompts
+- ⬜ Prompt Builder
+- ⬜ Prompt Versioning
+- ⬜ Prompt Registry
+### 🏛️ Architecture
+- Prompt Service
+- Prompt Repository
+---
 
-📍Phase 7 - Embeddings & Vector Search
-⬜ Embeddings
-⬜ Chunking
-⬜ Semantic Search
+## 🌊 Phase 6 — Streaming
+>  _Real-time token delivery_ 
 
-Vector DB:
+- ⬜ Token Streaming
+- ⬜ Server-Sent Events (SSE)
+- ⬜ WebSockets
+- ⬜ Streaming APIs
+---
 
-⬜ Chroma
-⬜ FAISS
-⬜ Pinecone (concept)
-⬜ pgvector
+## 🔍 Phase 7 — Embeddings & Vector Search
+>  _Semantic understanding at scale_ 
 
-📍Phase 8 - RAG
-⬜ Document Loader
-⬜ Chunking
-⬜ Embeddings
-⬜ Vector Search
-⬜ Retrieval
-⬜ Context Injection
+### 🧮 Core Concepts
+- ⬜ Embeddings
+- ⬜ Chunking
+- ⬜ Semantic Search
+### 🗄️ Vector Databases
+| Database | Status |
+| ----- | ----- |
+| Chroma | ⬜ |
+| FAISS | ⬜ |
+| Pinecone | <p>⬜ </p><p>_(concept)_</p> |
+| pgvector | ⬜ |
+---
 
-Advanced:
+## 📚 Phase 8 — RAG (Retrieval-Augmented Generation)
+>  _Ground your AI in real data_ 
 
-⬜ Hybrid Search
-⬜ Reranking
+### 🔧 Core Pipeline
+- ⬜ Document Loader
+- ⬜ Chunking
+- ⬜ Embeddings
+- ⬜ Vector Search
+- ⬜ Retrieval
+- ⬜ Context Injection
+### 🚀 Advanced Techniques
+- ⬜ Hybrid Search
+- ⬜ Reranking
+---
 
-📍Phase 9 - AI Agents
-⬜ Agent Basics
-⬜ Planning
-⬜ Memory
-⬜ Multi-step Reasoning
+## 🤖 Phase 9 — AI Agents
+>  _Autonomous AI that thinks and acts_ 
 
-📍Phase 10 - Tool Calling
-⬜ Tool Registry
-⬜ Tool Invocation
-⬜ Function Calling
-⬜ JSON Schema
-⬜ External APIs
+- ⬜ Agent Basics
+- ⬜ Planning
+- ⬜ Memory
+- ⬜ Multi-step Reasoning
+---
 
-Examples:
+## 🔧 Phase 10 — Tool Calling
+>  _Give your AI superpowers_ 
 
-Weather
-Calculator
-Search
-Email
+### 🛠️ Core Features
+- ⬜ Tool Registry
+- ⬜ Tool Invocation
+- ⬜ Function Calling
+- ⬜ JSON Schema
+- ⬜ External APIs
+### 📦 Example Tools
+| Tool | Use Case |
+| ----- | ----- |
+| 🌤️ Weather | Real-time weather data |
+| 🧮 Calculator | Math operations |
+| 🔎 Search | Web search integration |
+| 📧 Email | Send notifications |
+---
 
-📍Phase 11 - MCP (Model Context Protocol)
-⬜ MCP Basics
-⬜ MCP Server
-⬜ MCP Client
-⬜ MCP Tools
-⬜ MCP Resources
+## 🔌 Phase 11 — MCP (Model Context Protocol)
+>  _Standardized AI communication_ 
 
-📍Phase 12 - Memory Systems
-⬜ Conversation Memory
-⬜ Session Memory
-⬜ Long-term Memory
+- ⬜ MCP Basics
+- ⬜ MCP Server
+- ⬜ MCP Client
+- ⬜ MCP Tools
+- ⬜ MCP Resources
+---
 
-📍Phase 13 - AI Safety
-⬜ Guardrails
-⬜ Prompt Injection
-⬜ Jailbreak Protection
-⬜ Input Validation
-⬜ Output Validation
+## 🧠 Phase 12 — Memory Systems
+>  _AI that remembers_ 
 
-📍Phase 14 - Performance
-⬜ Caching
-⬜ Redis
-⬜ Response Cache
-⬜ Prompt Cache
+- ⬜ Conversation Memory
+- ⬜ Session Memory
+- ⬜ Long-term Memory
+---
 
-📍Phase 15 - Deployment
-⬜ Docker
-⬜ Docker Compose
+## 🛡️ Phase 13 — AI Safety
+>  _Responsible AI deployment_ 
 
-Later:
+- ⬜ Guardrails
+- ⬜ Prompt Injection Protection
+- ⬜ Jailbreak Protection
+- ⬜ Input Validation
+- ⬜ Output Validation
+---
 
-Kubernetes
-Helm
+## ⚡ Phase 14 — Performance
+>  _Speed and efficiency at scale_ 
 
-📍Phase 16 - Testing
-⬜ Unit Tests
-⬜ Integration Tests
-⬜ Provider Mocking
-⬜ API Tests
+- ⬜ Caching Strategy
+- ⬜ Redis Integration
+- ⬜ Response Cache
+- ⬜ Prompt Cache
+---
 
-📍Phase 17 - CI/CD
-⬜ GitHub Actions
-⬜ Linting
-⬜ Automated Tests
-⬜ Build Pipeline
+## 🐳 Phase 15 — Deployment
+>  _Ship it to production_ 
 
-📍Phase 18 - Architecture Deep Dive (Parallel Track)
+### 🚢 Core
+- ⬜ Docker
+- ⬜ Docker Compose
+### 🔮 Future
+- ☸️ Kubernetes
+- ⎈ Helm
+---
 
-For every pattern we'll maintain notes in docs/notes/design-patterns/.
+## 🧪 Phase 16 — Testing
+>  _Quality assurance at every level_ 
 
-Each pattern will include:
+- ⬜ Unit Tests
+- ⬜ Integration Tests
+- ⬜ Provider Mocking
+- ⬜ API Tests
+---
 
-✅ Intent
-✅ GoF Category
-✅ SOLID Principle
-✅ Python Example
-✅ Java Example
-✅ Why we're using it
-✅ Why we're NOT using another pattern
-✅ Production use case
-✅ Interview questions
-✅ Common mistakes
+## 🔄 Phase 17 — CI/CD
+>  _Automate everything_ 
 
-Examples:
+- ⬜ GitHub Actions
+- ⬜ Linting
+- ⬜ Automated Tests
+- ⬜ Build Pipeline
+---
 
-Factory
-Strategy
-Adapter
-Facade
-Builder
-Template Method
-Observer
-Singleton (and why to avoid it)
-Dependency Injection
+## 📐 Phase 18 — Architecture Deep Dive _(Parallel Track)_
+>  _Master design patterns — Notes in_ `_docs/notes/design-patterns/_` 
 
-📍Phase 19 - System Design & AI Architecture (Parallel Track)
+### 📋 Each Pattern Includes
+| Aspect | Status |
+| ----- | ----- |
+| Intent | ✅ |
+| GoF Category | ✅ |
+| SOLID Principle | ✅ |
+| Python Example | ✅ |
+| Java Example | ✅ |
+| Why we're using it | ✅ |
+| Why NOT another pattern | ✅ |
+| Production use case | ✅ |
+| Interview questions | ✅ |
+| Common mistakes | ✅ |
+### 🎯 Patterns Covered
+| Pattern | Notes |
+| ----- | ----- |
+| Factory | Creational |
+| Strategy | Behavioral |
+| Adapter | Structural |
+| Facade | Structural |
+| Builder | Creational |
+| Template Method | Behavioral |
+| Observer | Behavioral |
+| Singleton | <p>⚠️ </p><p>_Why to avoid_</p> |
+| Dependency Injection | Structural |
+---
 
-We'll also maintain docs/notes/system-design/:
+## 🏛️ Phase 19 — System Design & AI Architecture _(Parallel Track)_
+>  _Think big picture — Notes in_ `_docs/notes/system-design/_` 
 
-AI Gateway
-API Gateway
-LLM Routing
-Cost Optimization
-Token Management
-Caching
-RAG at Scale
-Agent Architecture
-Multi-Agent Systems
-Event-Driven AI
-Kafka + AI
-Async Processing
-Background Jobs
-Webhooks
-
+### 📚 Topics
+| Category | Topics |
+| ----- | ----- |
+| **Gateway** | AI Gateway, API Gateway, LLM Routing |
+| **Optimization** | Cost Optimization, Token Management, Caching |
+| **RAG** | RAG at Scale, Agent Architecture, Multi-Agent Systems |
+| **Event-Driven** | Event-Driven AI, Kafka + AI |
+| **Async** | Async Processing, Background Jobs, Webhooks |
